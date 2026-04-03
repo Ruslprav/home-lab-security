@@ -1,0 +1,11 @@
+--- LOG ANALYSIS REPORT ---
+Source File: /var/log/auth.log (Sample)
+Analysis Date: 2024-05-20
+
+[FINDINGS]
+Detected 3 failed login attempts from IP: 192.168.1.100
+Pattern: "Failed password for invalid user admin"
+
+[ACTION]
+IP 192.168.1.100 marked as suspicious. 
+Recommendation: Add to IP-Blacklist (iptables).
