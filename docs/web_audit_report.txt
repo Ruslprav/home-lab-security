@@ -1,0 +1,4 @@
+--- WEB SECURITY AUDIT ---
+Target: Local Dev Server
+Result: Found exposed .env file containing database credentials.
+Recommendation: Update .htaccess / Nginx config to deny access to dot-files.

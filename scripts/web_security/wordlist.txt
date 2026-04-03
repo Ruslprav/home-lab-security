@@ -1,0 +1,13 @@
+admin
+login
+api
+v1
+.env
+.git
+config.php
+backup.zip
+test
+dev
+phpmyadmin
+upload
+scripts
