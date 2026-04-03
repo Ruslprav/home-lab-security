@@ -1,15 +1,6 @@
---- SYSTEM HARDENING SETUP ---
-OS: Ubuntu 22.04 LTS
+--- SYSTEM HARDENING CHECKLIST ---
+Target OS: Ubuntu 22.04 LTS
 
-1. SSH Configuration (/etc/ssh/sshd_config):
-- Port: 2222
-- PermitRootLogin: no
-- PasswordAuthentication: no (Key-based only)
-
-2. Firewall (UFW):
-- Default: deny (incoming), allow (outgoing)
-- Allow: 2222/tcp (SSH), 80/tcp (HTTP)
-
-3. Users:
-- Root access: Restricted
-- Sudo group: Managed with strict ACL
+1. SSH: Port 2222, Root login disabled, Key-auth only. [OK]
+2. Firewall: UFW active, default deny incoming. [OK]
+3. Privileges: Sudo access restricted to admin group. [OK]

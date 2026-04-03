@@ -1,13 +1,16 @@
---- NETWORK SCAN REPORT ---
-Target Host: 127.0.0.1 (Localhost)
-Date: 2024-05-20
+--- ADVANCED SECURITY AUDIT REPORT ---
+Target: 127.0.0.1 (Localhost)
+Scan Date: 2024-05-20
 
-[RESULTS]
+[SYSTEM INFO]
+OS: Windows (User: Руслан)
+Status: Security check initiated.
+
+[PORT SCAN RESULTS]
 Port 22 (SSH):   CLOSED
 Port 80 (HTTP):  CLOSED
 Port 443 (HTTPS): CLOSED
 Port 3389 (RDP): CLOSED
 
-[ANALYSIS]
-Все критические порты закрыты. Прямых угроз не обнаружено.
-Рекомендация: продолжать мониторинг при развертывании новых сервисов.
+[CONCLUSION]
+Критические порты закрыты. Прямых векторов атаки через стандартные сервисы не обнаружено.
