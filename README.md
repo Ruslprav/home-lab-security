@@ -1,27 +1,30 @@
 # 🛡️ Cybersecurity Home-Lab & Automation
 
-Репозиторий содержит описание конфигурации защищенного стенда и инструменты для автоматизации анализа безопасности (SIEM/Vulnerability Management).
+Проект по развертыванию защищенной ИТ-инфраструктуры и разработке инструментов для мониторинга безопасности (SIEM/Vulnerability Management).
 
 ---
 
-### 📂 Структура проекта
+### 📂 Структура репозитория
 
-#### 1. [Infrastructure Setup](./docs/hardening_check.txt)
-*   **Среда:** Ubuntu Server + Windows 10 (Изолированный сегмент).
-*   **Hardening:** Настройка UFW, аутентификация по SSH-ключам, минимизация портов.
-*   **Цель:** Отработка навыков администрирования и защиты узлов.
+#### 1. [Advanced Security Scanner](./scripts/advanced_scanner/main.py) (New 🚀)
+*   **Архитектура:** Модульное приложение (ООП) с разделением логики.
+*   **Функционал:** Сбор системных метрик ОС (`utils.py`) + многопоточное сканирование портов (`scanner.py`).
+*   **Стек:** Python (socket, sys, platform).
 
-#### 2. [Automation Scripts](./scripts/)
-В папке `scripts` находятся инструменты на Python:
-*   **`log_monitor.py`**: Анализатор логов на признаки Brute-force атак.
-*   **`port_scanner.py`**: Скрипт для аудита открытых TCP-портов.
+#### 2. [Security Scripts](./scripts/)
+*   **`log_monitor.py`**: Автоматический поиск признаков Brute-force атак в логах.
+*   **`port_scanner.py`**: Базовый аудит сетевых интерфейсов.
+
+#### 3. [Infrastructure & Hardening](./docs/hardening_check.txt)
+*   **Конфигурация:** Описание настройки Ubuntu Server (UFW, SSH Hardening).
+*   **Отчеты:** [Результаты сканирования и анализа инцидентов](./docs/).
 
 ---
 
-### 🚀 Быстрый запуск (CLI)
+### 🚀 Запуск инструментов
 ```bash
-# Клонирование репозитория
-git clone https://github.com
+# Продвинутый аудит системы и сети
+python scripts/advanced_scanner/main.py
 
-# Запуск сканера портов
-python3 scripts/port_scanner.py
+# Базовый анализатор логов
+python scripts/log_monitor.py
